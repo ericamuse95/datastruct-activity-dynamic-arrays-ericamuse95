@@ -19,15 +19,22 @@ public class Main {
         // Create a new ArrayList instance
         // Add each of the foods to the list
         // Then return it
+        ArrayList<String> favoriteFood = new ArrayList<>();
+        favoriteFood.add(food1);
+        favoriteFood.add(food2);
+        favoriteFood.add(food3);
+        favoriteFood.add(food4);
 
-        return null;
+        return favoriteFood;
     }
 
     // Exercise Two -------------------------------------------------------------------
     public static int findTheSizeOfArrayList(ArrayList<String> favoriteFood){
         // Find the size of favoriteFood using the pre-defined method in Java
         // Return the size
-        return 0;
+        int findSize = favoriteFood.size();
+
+        return findSize;
     }
 
     // Exercise Three -------------------------------------------------------------------
@@ -38,8 +45,10 @@ public class Main {
     ){
         // Access the element at a particular index using the pre-defined method in Java
         // Return the element
+       String accessElement = favoriteFood.get(index);
 
-        return "";
+
+        return accessElement;
     }
 
     // Exercise Four -------------------------------------------------------------------
@@ -47,8 +56,10 @@ public class Main {
         // Iterate through favoriteFood and count the number of times you find the String "Cake"
         // Return the number of occurrences
 
-        return 0;
+        int countCake = Collections.frequency(favoriteFood,"Cake");
+            return countCake;
     }
+
 
     // Exercise Five -------------------------------------------------------------------
     // We can stack input parameters like this to save space
@@ -58,6 +69,7 @@ public class Main {
             String replacementValue
     ){
         // Replace the element at index with the replacementValue
+        favoriteFood.set(index,replacementValue);
 
     }
 
@@ -68,20 +80,26 @@ public class Main {
         // No need to return favoriteFood
         // Hint: Don't use the ArrayList sort method, there is an easier one inside Collections
         // Google around to find it.
+        Collections.sort(favoriteFood);
     }
 
     // Exercise Seven -------------------------------------------------------------------
     public static String[] convertArrayListToStringArray(ArrayList<String> favoriteFood){
         // Convert the ArrayList to a String[] array
         // Return the new String[] array
-        return null;
+
+        String[] primitiveArray = favoriteFood.toArray(new String[]{});
+
+        return primitiveArray;
     }
 
     // Exercise Eight -------------------------------------------------------------------
     public static ArrayList<String> convertStringArrayToArrayList(String[] inputStrings){
         // Convert inputStrings to an ArrayList
         // Return the ArrayList
-        return null;
+
+        ArrayList<String> convertedList = new ArrayList<>(Arrays.asList(inputStrings));
+        return convertedList;
     }
     
     public static void main(String[] args) {
